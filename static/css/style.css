@@ -599,7 +599,7 @@ footer {
     overflow: hidden;
 }
 
-/* The main integrated display window */
+/* The main integrated display window - STRICT LOCK */
 .hero-display {
     background: var(--glass-bg);
     backdrop-filter: blur(25px);
@@ -608,7 +608,7 @@ footer {
     border-radius: 30px;
     overflow: hidden;
     display: flex;
-    min-height: 600px;
+    height: 650px !important; /* STRICT FIXED HEIGHT */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -618,17 +618,20 @@ footer {
 }
 
 .hero-content-side {
-    flex: 1;
+    width: 50% !important; /* FIXED 50% WIDTH */
+    flex-basis: 50% !important;
     padding: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 
 .hero-image-side {
-    flex: 1;
+    width: 50% !important; /* FIXED 50% WIDTH */
+    flex-basis: 50% !important;
     position: relative;
     overflow: hidden;
 }
@@ -756,4 +759,20 @@ footer {
     max-width: 1300px;
     position: relative;
     padding: 0 40px;
+}
+
+/* Slide Transition Fixes */
+.carousel-inner {
+    overflow: visible !important;
+    height: 700px !important; /* Slightly larger to account for shadow/glow */
+}
+
+.carousel-item {
+    padding: 25px 0; /* Consistent vertical centering */
+    height: 700px !important;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
 }
