@@ -35,42 +35,126 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero-section d-flex align-items-center" style="min-height: 100vh; position: relative; overflow: hidden;">
-        <!-- decorative background elements -->
-        <div style="position: absolute; top: 10%; right: -5%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 70%); border-radius: 50%; filter: blur(50px);"></div>
-        <div style="position: absolute; bottom: -10%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(100,100,255,0.08) 0%, transparent 70%); border-radius: 50%; filter: blur(60px);"></div>
+    <!-- Hero Carousel Section -->
+    <header class="hero-section">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
 
-        <div class="container position-relative" style="z-index: 2;">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <div class="glass-panel p-5 d-inline-block mb-4 animate-on-scroll delay-100">
-                        <span class="text-white text-uppercase letter-spacing-2 mb-2 d-block small fw-bold">Est. 1985 • Faisalabad, Pakistan</span>
-                        <h1 class="display-2 fw-light mb-4 text-white">
-                            Weaving the <br>
-                            <span class="fw-bold text-shimmer">Fabric of Future</span>
-                        </h1>
-                        <p class="lead text-muted mb-5 animate-on-scroll delay-200" style="max-width: 500px;">
-                            Experience the perfect blend of luxury, durability, and innovation. 
-                            From raw yarn to finished couture fabrics.
-                        </p>
-                        <div class="d-flex gap-3 animate-on-scroll delay-300">
-                            <a href="services.html" class="btn btn-primary-3d">Discover Collections</a>
-                            <a href="contact.html" class="btn" style="color: white; padding: 12px 30px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; transition: 0.3s;">Contact Us</a>
+            <div class="carousel-inner">
+                <!-- Slide 1: Sustainable Future -->
+                <div class="carousel-item active">
+                    <div class="container h-100">
+                        <div class="row align-items-center h-100">
+                            <div class="col-lg-6">
+                                <div class="glass-panel animate__animated animate__fadeInLeft">
+                                    <span class="text-white text-uppercase letter-spacing-2 mb-3 d-block small fw-bold">Innovating Since 1985</span>
+                                    <h1 class="display-2 fw-light mb-4 text-white">
+                                        Sustainable <br>
+                                        <span class="fw-bold text-shimmer">Textile Future</span>
+                                    </h1>
+                                    <p class="lead text-muted mb-5" style="max-width: 550px;">
+                                        Leading the way in eco-friendly cotton sourcing and zero-liquid discharge dyeing processes.
+                                    </p>
+                                    <div class="d-flex gap-3">
+                                        <a href="services.html" class="btn btn-primary-3d">Our Ethics</a>
+                                        <a href="contact.html" class="btn btn-outline-light-custom">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-block animate__animated animate__fadeInRight">
+                                <div class="card-3d p-2 card-floating-anim">
+                                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sustainable Cotton Production">
+                                    <div class="p-3 position-absolute bottom-0 start-0 w-100 carousel-caption-glass">
+                                        <h5 class="m-0 text-white">Organic Harvest</h5>
+                                        <small class="text-muted">Pure. Natural. Ethical.</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- 3D Floating Element -->
-                <div class="col-lg-5 d-none d-lg-block">
-                    <div class="card-3d p-2 card-floating-anim" style="transform: rotateY(-15deg) rotateX(5deg);">
-                        <img src="https://images.unsplash.com/photo-1620799140408-ed5341cd2431?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Silk Fabric" class="img-fluid rounded-3" style="mask-image: none !important;">
-                        <div class="p-3 position-absolute bottom-0 start-0 w-100" style="background: rgba(0,0,0,0.8); backdrop-filter: blur(5px);">
-                            <h5 class="m-0 text-white">Ethical Silk Series</h5>
-                            <small class="text-muted">Winter Collection 2025</small>
+
+                <!-- Slide 2: Luxury Collections -->
+                <div class="carousel-item">
+                    <div class="container h-100">
+                        <div class="row align-items-center h-100">
+                            <div class="col-lg-6">
+                                <div class="glass-panel">
+                                    <span class="text-white text-uppercase letter-spacing-2 mb-3 d-block small fw-bold">Premium Collections 2025</span>
+                                    <h1 class="display-2 fw-light mb-4 text-white">
+                                        The Art of <br>
+                                        <span class="fw-bold text-shimmer">Luxury Silks</span>
+                                    </h1>
+                                    <p class="lead text-muted mb-5" style="max-width: 550px;">
+                                        Experience the pinnacle of textile craftsmanship with our high-count silk and velvet series.
+                                    </p>
+                                    <div class="d-flex gap-3">
+                                        <a href="products.html" class="btn btn-primary-3d">View Products</a>
+                                        <a href="about.html" class="btn btn-outline-light-custom">Our Story</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <div class="card-3d p-2 card-floating-anim">
+                                    <img src="https://images.unsplash.com/photo-1620799139507-2a76f79a2f4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Fabric Texture">
+                                    <div class="p-3 position-absolute bottom-0 start-0 w-100 carousel-caption-glass">
+                                        <h5 class="m-0 text-white">Royal Silk Series</h5>
+                                        <small class="text-muted">Winter Collection 2025</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Global Logistics -->
+                <div class="carousel-item">
+                    <div class="container h-100">
+                        <div class="row align-items-center h-100">
+                            <div class="col-lg-6">
+                                <div class="glass-panel">
+                                    <span class="text-white text-uppercase letter-spacing-2 mb-3 d-block small fw-bold">Global Presence</span>
+                                    <h1 class="display-2 fw-light mb-4 text-white">
+                                        Connecting <br>
+                                        <span class="fw-bold text-shimmer">Global Markets</span>
+                                    </h1>
+                                    <p class="lead text-muted mb-5" style="max-width: 550px;">
+                                        Our vertical manufacturing unit in Faisalabad serves top fashion houses across Europe and Asia.
+                                    </p>
+                                    <div class="d-flex gap-3">
+                                        <a href="contact.html" class="btn btn-primary-3d">Global Inquiry</a>
+                                        <a href="services.html" class="btn btn-outline-light-custom">Our Capacity</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <div class="card-3d p-2 card-floating-anim">
+                                    <img src="https://images.unsplash.com/photo-1558583082-409143c794ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Textile Factory">
+                                    <div class="p-3 position-absolute bottom-0 start-0 w-100 carousel-caption-glass">
+                                        <h5 class="m-0 text-white">World Delivery</h5>
+                                        <small class="text-muted">Direct from Faisalabad</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </header>
 

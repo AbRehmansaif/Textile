@@ -73,6 +73,38 @@ body::before {
     transform: translateY(-5px);
 }
 
+/* Adjusted Hero Padding for Content Visibility */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 80px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-section .container {
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.card-3d {
+    transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
+    transition: transform 0.6s ease;
+}
+
+.card-3d:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-10px);
+    border-color: var(--accent-gold);
+}
+
 /* Navbar Reform */
 .navbar {
     background: rgba(0, 0, 0, 0.85); /* Darker navbar */
@@ -174,6 +206,21 @@ p, .text-muted {
     color: #000;
     box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
     transform: translateY(-2px);
+}
+
+.btn-outline-light-custom {
+    color: white;
+    padding: 12px 30px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.btn-outline-light-custom:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    color: white;
 }
 
 /* Form Styles */
@@ -540,4 +587,118 @@ footer {
 .social-icon-link.linkedin:hover {
     background: #0077b5;
     border-color: #0077b5;
+}
+/* Carousel Enhancements */
+.carousel, .carousel-inner {
+    height: 650px !important; /* Strictly fixed container height */
+}
+
+.carousel-item {
+    height: 100% !important;
+    transition: transform 1s cubic-bezier(0.7, 0, 0.3, 1), opacity 1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.carousel-indicators {
+    bottom: 40px;
+    z-index: 5;
+    gap: 10px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 50px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: var(--accent-gold);
+    width: 80px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Glass Panel Standardization - STRICT identical dimensions for all slides */
+.hero-section .glass-panel {
+    height: 600px !important; 
+    width: 100% !important;
+    max-width: 800px !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    padding: 4.5rem !important; 
+    margin: 0 auto;
+    box-sizing: border-box !important;
+}
+
+/* 3D Card Standardization - STRICT identical dimensions for all slides */
+.hero-section .card-3d {
+    height: 600px !important; 
+    width: 100% !important;
+    max-width: 800px !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    margin: 0 auto;
+    box-sizing: border-box !important;
+}
+
+.hero-section .card-3d img {
+    height: 600px !important; /* Matched to card height */
+    width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 20px;
+}
+
+/* Side Navigation Arrows - Positioned OUTSIDE cards */
+.carousel-control-prev, .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8; /* Higher visibility */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+    z-index: 10;
+}
+
+.carousel-control-prev {
+    left: 1.5%; /* Moved further out */
+}
+
+.carousel-control-next {
+    right: 1.5%; /* Moved further out */
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    opacity: 1 !important;
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    filter: invert(1); /* Switch arrow color to black on gold bg */
+}
+
+/* Indicators - Positioned BELOW the cards */
+.carousel-indicators {
+    bottom: 20px !important; /* Move further down toward edge */
+    z-index: 5;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+/* Hero Container Constraint - Ensuring space for side buttons */
+.hero-section .container {
+    max-width: 1500px; /* Increased from 1300px to allow wider cards */
+    height: auto; 
+    padding-left: 100px;
+    padding-right: 100px;
 }
