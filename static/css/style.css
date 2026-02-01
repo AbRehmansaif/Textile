@@ -588,121 +588,172 @@ footer {
     background: #0077b5;
     border-color: #0077b5;
 }
-/* Carousel Enhancements */
-.carousel, .carousel-inner {
-    height: 650px !important; 
-    overflow: visible !important; /* Allow controls to be outside */
+/* --- NEW PREMIUM HERO SLIDER DESIGN --- */
+
+.hero-section {
+    min-height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at 50% 50%, rgba(20, 20, 25, 0.5) 0%, var(--bg-dark) 100%);
+    overflow: hidden;
 }
 
-.carousel-item {
-    height: 650px !important;
-    transition: transform 1s cubic-bezier(0.7, 0, 0.3, 1), opacity 1s cubic-bezier(0.7, 0, 0.3, 1);
+/* The main integrated display window */
+.hero-display {
+    background: var(--glass-bg);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    min-height: 600px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.6);
+    position: relative;
+    z-index: 2;
 }
 
-.carousel-indicators {
-    bottom: 40px;
-    z-index: 5;
+.hero-content-side {
+    flex: 1;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image-side {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    transition: transform 12s linear;
+}
+
+.carousel-item.active .hero-image-side img {
+    transform: scale(1.15); /* Slow zoom effect */
+}
+
+/* Typography Enhancements */
+.hero-badge {
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
     gap: 10px;
 }
 
+.hero-badge::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--accent-gold);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 200;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.hero-title strong {
+    font-weight: 700;
+    color: var(--accent-gold);
+    background: linear-gradient(to right, #fff 0%, var(--accent-gold) 50%, #fff 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    max-width: 450px;
+}
+
+/* Buttons */
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-premium {
+    padding: 15px 35px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-premium-gold {
+    background: var(--accent-gold);
+    color: #000;
+    border: 1px solid var(--accent-gold);
+}
+
+.btn-premium-outline {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Controls */
+.carousel-control-prev, .carousel-control-next {
+    width: 80px;
+    opacity: 0.3;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Indicators */
+.carousel-indicators {
+    bottom: -60px;
+    gap: 12px;
+}
+
 .carousel-indicators [data-bs-target] {
-    width: 50px;
-    height: 6px;
-    border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.2);
+    width: 60px;
+    height: 3px;
+    background-color: rgba(255,255,255,0.1);
     border: none;
-    transition: all 0.3s ease;
 }
 
 .carousel-indicators .active {
     background-color: var(--accent-gold);
-    width: 80px;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    width: 100px;
 }
 
-/* Glass Panel Standardization - ABSOLUTE FIXED DIMENSIONS */
-.hero-section .glass-panel {
-    height: 600px !important; 
-    width: 650px !important; /* Fixed width in pixels */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    padding: 5rem !important; 
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-    flex-shrink: 0 !important; /* Prevent shrinking */
-}
-
-/* 3D Card Standardization - ABSOLUTE FIXED DIMENSIONS */
-.hero-section .card-3d {
-    height: 600px !important; 
-    width: 650px !important; /* Fixed width in pixels */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    overflow: hidden !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-    flex-shrink: 0 !important; /* Prevent shrinking */
-}
-
-.hero-section .card-3d img {
-    height: 600px !important; 
-    width: 650px !important; /* Matches card width */
-    object-fit: cover !important;
-    border-radius: 20px;
-}
-
-/* Side Navigation Arrows - Positioned OUTSIDE cards */
-.carousel-control-prev, .carousel-control-next {
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.8; /* Higher visibility */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.4s ease;
-    z-index: 10;
-}
-
-.carousel-control-prev {
-    left: 1.5%; /* Moved further out */
-}
-
-.carousel-control-next {
-    right: 1.5%; /* Moved further out */
-}
-
-.carousel-control-prev:hover, .carousel-control-next:hover {
-    opacity: 1 !important;
-    background: var(--accent-gold);
-    border-color: var(--accent-gold);
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-}
-
-.carousel-control-prev:hover .carousel-control-prev-icon,
-.carousel-control-next:hover .carousel-control-next-icon {
-    filter: invert(1); /* Switch arrow color to black on gold bg */
-}
-
-/* Indicators - Positioned BELOW the cards */
-.carousel-indicators {
-    bottom: 20px !important; /* Move further down toward edge */
-    z-index: 5;
-    gap: 15px;
-    margin-bottom: 0;
-}
-
-/* Hero Container Constraint - Ensuring space for side buttons */
+/* Hero Container Constraint */
 .hero-section .container {
-    max-width: 1400px !important;
-    height: 650px !important;
-    padding-left: 50px !important;
-    padding-right: 50px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    max-width: 1300px;
+    position: relative;
+    padding: 0 40px;
 }
