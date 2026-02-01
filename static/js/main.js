@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('LuxeTex Premium Loaded');
+    console.log('Twil Tex Premium Loaded');
 
     // --- Glass Tilt Effect ---
     const cards = document.querySelectorAll('.card-3d, .glass-panel');

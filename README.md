@@ -1,4 +1,4 @@
-# LuxeTex Industries Website
+# Twil Tex Industries Website
 
 This project is a professional, 3D-styled website for the Textile Industry.
 
