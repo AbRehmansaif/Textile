@@ -511,3 +511,33 @@ footer {
     transform: scaleX(0);
     transform-origin: right;
 }
+/* Social Icons in Footer */
+.social-icon-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    text-decoration: none;
+}
+
+.social-icon-link:hover {
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.social-icon-link.facebook:hover {
+    background: #1877f2;
+    border-color: #1877f2;
+}
+
+.social-icon-link.linkedin:hover {
+    background: #0077b5;
+    border-color: #0077b5;
+}

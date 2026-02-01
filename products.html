@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twil Tex - Textile Printing</title>
+    <title>Twil Tex - Our Products</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,7 +16,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><i class="fas fa-layer-group"></i> Twil Tex</a>
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-gem me-2" style="font-size: 0.8em; color: var(--accent-gold);"></i>Twil Tex
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
             </button>
@@ -24,7 +26,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -33,82 +35,97 @@
         </div>
     </nav>
 
-    <!-- Detail Header -->
-    <header class="py-5 mt-5">
-        <div class="container">
-            <a href="services.html" class="text-white-50 text-decoration-none mb-3 d-block"><i class="fas fa-arrow-left me-2"></i> Back to Services</a>
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-3 fw-bold text-3d mb-4">Textile Printing</h1>
-                    <p class="lead text-white-50">State-of-the-art digital and rotary printing solutions.</p>
-                </div>
-            </div>
+    <!-- Products Hero -->
+    <header class="py-5 mt-5 text-center position-relative overflow-hidden" style="min-height: 40vh; display: flex; align-items: center;">
+        <div class="container animate-on-scroll">
+             <h1 class="display-3 fw-bold text-shimmer mb-4">Our Textile Products</h1>
+             <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                From high-strength yarns to luxurious finished fabrics, explore our comprehensive range of textile solutions.
+             </p>
         </div>
     </header>
 
-    <!-- Content -->
-    <section class="pb-5">
+    <!-- Product Grid -->
+    <section class="py-5">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6">
-                    <div class="card-3d p-4 h-100">
-                        <img src="https://images.unsplash.com/photo-1558235284-8869768a85f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Textile Printing" class="img-fluid rounded-3 mb-4 shadow-lg">
-                        <h4 class="text-white mb-3">Process Overview</h4>
-                        <p class="text-white-50">
-                            We bring designs to life with our advanced printing division. 
-                            From traditional rotary screens for bulk orders to cutting-edge digital printing for intricate, multi-color designs, we offer versatile solutions for fashion and home textiles.
-                        </p>
-                        <ul class="list-unstyled text-muted mt-3">
-                            <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i> High-Resolution Digital Prints</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i> Up to 12 Colors in Rotary Printing</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i> Sustainable Inks & Pigments</li>
-                        </ul>
-                        <div class="mt-4">
-                            <h5 class="text-white mb-3">Design Studio</h5>
-                            <div class="row g-2">
-                                <div class="col-6">
-                                    <img src="https://images.unsplash.com/photo-1558235284-8869768a85f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Color Lab" class="img-fluid rounded-2 mb-2">
-                                    <small class="text-muted d-block">Color Matching</small>
-                                </div>
-                                <div class="col-6">
-                                     <img src="https://images.unsplash.com/photo-1563837712359-1667f31458e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Printing Machine" class="img-fluid rounded-2 mb-2">
-                                    <small class="text-muted d-block">Reggiani Printers</small>
-                                </div>
-                            </div>
+                <!-- Product 1: Yarn -->
+                <div class="col-lg-4 animate-on-scroll delay-100">
+                    <div class="card-3d h-100">
+                        <div class="img-reveal">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=800" alt="Premium Yarn" class="img-fluid">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-white h4 mb-3">Industrial Yarns</h3>
+                            <p class="text-muted small mb-4">
+                                Our yarns are available in 100% Cotton, Polyester, and specialized blends. Engineered for high-speed weaving and knitting.
+                            </p>
+                            <ul class="list-unstyled text-muted small mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-gold me-2"></i> Ring Spun & Compact</li>
+                                <li class="mb-2"><i class="fas fa-check text-gold me-2"></i> Open End Yarns</li>
+                                <li><i class="fas fa-check text-gold me-2"></i> Fancy & Slub Yarns</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary-3d w-100">Request Quote</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="card-3d p-4 mb-4">
-                        <h4 class="text-white mb-3">Specifications</h4>
-                        <table class="table table-dark table-hover border-white-50">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Technologies</th>
-                                    <td>Digital Direct-to-Fabric, Rotary Screen</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Max Width</th>
-                                    <td>300 cm</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Capacity</th>
-                                    <td>20,000 Meters / Day</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Substrates</th>
-                                    <td>Cotton, Silk, Viscose, Polyester</td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+                <!-- Product 2: Fabrics -->
+                <div class="col-lg-4 animate-on-scroll delay-200">
+                    <div class="card-3d h-100">
+                        <div class="img-reveal">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=800" alt="Luxury Fabrics" class="img-fluid">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-white h4 mb-3">Premium Fabrics</h3>
+                            <p class="text-muted small mb-4">
+                                Diverse range of greige, dyed, and printed fabrics catering to fashion, home, and industrial sectors.
+                            </p>
+                            <ul class="list-unstyled text-muted small mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-gold me-2"></i> Twill, Sateen & Percale</li>
+                                <li class="mb-2"><i class="fas fa-check text-gold me-2"></i> Organic & Recycled</li>
+                                <li><i class="fas fa-check text-gold me-2"></i> Digital Print Base</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary-3d w-100">View Swatches</a>
+                        </div>
                     </div>
-                    
-                    <div class="card-3d p-4 text-center d-flex flex-column justify-content-center align-items-center" style="min-height: 200px;">
-                        <i class="fas fa-phone-volume fa-3x mb-3" style="color: var(--accent-color);"></i>
-                        <h5 class="text-white">Interested in this product?</h5>
-                        <p class="text-white-50 small">Contact our sales team for a custom quote.</p>
-                        <a href="contact.html" class="btn btn-primary-3d">Get Quote</a>
+                </div>
+
+                <!-- Product 3: Garments/Made-ups -->
+                <div class="col-lg-4 animate-on-scroll delay-300">
+                    <div class="card-3d h-100">
+                        <div class="img-reveal">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=800" alt="Textile Made-ups" class="img-fluid">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-white h4 mb-3">Finished Made-ups</h3>
+                            <p class="text-muted small mb-4">
+                                High-quality finished products including bed linen, institutional textiles, and basic apparel collections.
+                            </p>
+                            <ul class="list-unstyled text-muted small mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-gold me-2"></i> Bed Sheets & Duvets</li>
+                                <li class="mb-2"><i class="fas fa-check text-gold me-2"></i> Institutional Linens</li>
+                                <li><i class="fas fa-check text-gold me-2"></i> Custom Private Labeling</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary-3d w-100">Explore Catalog</a>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Call to Action -->
+    <section class="py-5 mb-5">
+        <div class="container">
+            <div class="glass-panel p-5 text-center animate-on-scroll">
+                <h2 class="text-white mb-4">Need Custom Textile Solutions?</h2>
+                <p class="text-muted mb-5 mx-auto" style="max-width: 600px;">
+                    We specialize in manufacturing bespoke textile products according to your specific count, construction, and design requirements.
+                </p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="contact.html" class="btn btn-primary-3d">Contact Sales</a>
+                    <a href="about.html" class="btn btn-outline-light rounded-pill px-5">Our Process</a>
                 </div>
             </div>
         </div>
@@ -130,9 +147,8 @@
                         <a href="#" class="social-icon-link linkedin"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <!-- Links (Responsive: List for Desktop, Swipeable for Mobile) -->
+                <!-- Links -->
                 <div class="col-lg-3 col-md-6 order-2 order-md-2">
-                    <!-- Desktop View -->
                     <div class="d-none d-md-block">
                         <h6 class="text-gold text-uppercase mb-4 fw-bold">Quick Links</h6>
                         <div class="row">
@@ -152,8 +168,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Mobile View: Horizontal Scrollable Pills -->
                     <div class="d-md-none mb-4">
                         <h6 class="text-gold text-uppercase mb-3 fw-bold ps-2">Explore</h6>
                         <div class="mobile-nav-scroll">
@@ -162,7 +176,6 @@
                             <a href="products.html" class="mobile-nav-pill"><i class="fas fa-box"></i> Products</a>
                             <a href="services.html" class="mobile-nav-pill"><i class="fas fa-layer-group"></i> Services</a>
                             <a href="contact.html" class="mobile-nav-pill"><i class="fas fa-envelope"></i> Contact</a>
-                            <a href="privacy.html" class="mobile-nav-pill"><i class="fas fa-shield-alt"></i> Privacy</a>
                         </div>
                     </div>
                 </div>
