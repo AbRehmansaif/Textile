@@ -590,11 +590,12 @@ footer {
 }
 /* Carousel Enhancements */
 .carousel, .carousel-inner {
-    height: 650px !important; /* Strictly fixed container height */
+    height: 650px !important; 
+    overflow: visible !important; /* Allow controls to be outside */
 }
 
 .carousel-item {
-    height: 100% !important;
+    height: 650px !important;
     transition: transform 1s cubic-bezier(0.7, 0, 0.3, 1), opacity 1s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
@@ -619,35 +620,35 @@ footer {
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
 }
 
-/* Glass Panel Standardization - STRICT identical dimensions for all slides */
+/* Glass Panel Standardization - ABSOLUTE FIXED DIMENSIONS */
 .hero-section .glass-panel {
     height: 600px !important; 
-    width: 100% !important;
-    max-width: 800px !important; 
+    width: 650px !important; /* Fixed width in pixels */
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-    padding: 4.5rem !important; 
-    margin: 0 auto;
+    padding: 5rem !important; 
+    margin: 0 auto !important;
     box-sizing: border-box !important;
+    flex-shrink: 0 !important; /* Prevent shrinking */
 }
 
-/* 3D Card Standardization - STRICT identical dimensions for all slides */
+/* 3D Card Standardization - ABSOLUTE FIXED DIMENSIONS */
 .hero-section .card-3d {
     height: 600px !important; 
-    width: 100% !important;
-    max-width: 800px !important; 
+    width: 650px !important; /* Fixed width in pixels */
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     overflow: hidden !important;
-    margin: 0 auto;
+    margin: 0 auto !important;
     box-sizing: border-box !important;
+    flex-shrink: 0 !important; /* Prevent shrinking */
 }
 
 .hero-section .card-3d img {
-    height: 600px !important; /* Matched to card height */
-    width: 100% !important;
+    height: 600px !important; 
+    width: 650px !important; /* Matches card width */
     object-fit: cover !important;
     border-radius: 20px;
 }
@@ -697,8 +698,11 @@ footer {
 
 /* Hero Container Constraint - Ensuring space for side buttons */
 .hero-section .container {
-    max-width: 1500px; /* Increased from 1300px to allow wider cards */
-    height: auto; 
-    padding-left: 100px;
-    padding-right: 100px;
+    max-width: 1400px !important;
+    height: 650px !important;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
