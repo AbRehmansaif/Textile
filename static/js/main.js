@@ -93,7 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
             btnIcon.className = `fas ${iconClass} ms-2`;
         }
     }
+
+    // --- Natural Textile Line Injection ---
+    initTextileLines();
 });
+
 
 function resetCustomDropdowns() {
     // Reset Display
@@ -464,3 +468,37 @@ document.addEventListener('DOMContentLoaded', () => {
 function closeAllDropdowns() {
     document.querySelectorAll('.custom-dropdown-list').forEach(el => el.classList.remove('open'));
 }
+
+function initTextileLines() {
+    // 1. Inject Vertical Warp Lines (Loom Foundation)
+    const warp = document.createElement('div');
+    warp.className = 'warp-lines';
+    document.body.prepend(warp);
+
+    // 2. Inject Static Fabric Texture
+    const texture = document.createElement('div');
+    texture.className = 'fabric-texture';
+    document.body.prepend(texture);
+
+    // 3. Inject Organic Thread Drift (High Impact)
+    const threadCount = 12;
+    for (let i = 0; i < threadCount; i++) {
+        const thread = document.createElement('div');
+        thread.className = 'organic-thread';
+
+        // Randomize spawn and movement
+        const delay = Math.random() * 20;
+        const duration = 15 + Math.random() * 15;
+        const top = Math.random() * 100;
+        const rotation = (Math.random() - 0.5) * 20;
+
+        thread.style.top = `${top}%`;
+        thread.style.left = '-50%';
+        thread.style.animationDelay = `-${delay}s`;
+        thread.style.animationDuration = `${duration}s`;
+        thread.style.transform = `rotate(${rotation}deg)`;
+
+        document.body.appendChild(thread);
+    }
+}
+
