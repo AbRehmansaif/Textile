@@ -4,6 +4,7 @@
     --text-main: #ffffff;
     --text-muted: #d1d5db; /* Lightened from rgba(0.7) for better contrast */
     --accent-gold: #ffd700; /* Brighter Gold */
+    --accent-green: #2ecc71; /* Vibrant Green for Sustainability */
     --accent-silk: #e0e0e0;
     
     /* Glass Tokens */
@@ -217,6 +218,10 @@ p, .text-muted {
 
 .text-gold {
     color: var(--accent-gold) !important;
+}
+
+.text-green {
+    color: var(--accent-green) !important;
 }
 
 /* Buttons */
