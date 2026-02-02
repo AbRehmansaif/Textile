@@ -61,6 +61,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            // --- Validation Logic ---
+            const firstName = document.getElementById('floatingFirstName').value.trim();
+            const email = document.getElementById('floatingEmail').value.trim();
+            const phone = document.getElementById('floatingPhone').value.trim();
+            const subject = document.getElementById('floatingSelect').value;
+            const message = document.getElementById('floatingTextarea').value.trim();
+
+            let errors = [];
+
+            if (!firstName) errors.push("First name is required.");
+            if (!email && !phone) errors.push("Please provide either an email or a phone number.");
+            if (!subject || subject === "Select Subject...") errors.push("Please select a valid subject.");
+            if (!message) errors.push("Please write your message.");
+
+            if (errors.length > 0) {
+                // Show Error Toast/Message
+                updateBtn(errors[0], 'fa-exclamation-triangle');
+                sendBtn.classList.add('btn-danger');
+                sendBtn.classList.remove('btn-primary-3d');
+
+                setTimeout(() => {
+                    updateBtn('Send Message', 'fa-paper-plane');
+                    sendBtn.classList.remove('btn-danger');
+                    sendBtn.classList.add('btn-primary-3d');
+                }, 3000);
+
+                return;
+            }
+
+            // --- Success Logic (Existing Animation) ---
             sendBtn.disabled = true;
             updateBtn('Spinning Thread...', 'fa-spinner fa-spin');
             setTimeout(() => {

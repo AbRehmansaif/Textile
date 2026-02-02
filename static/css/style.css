@@ -256,6 +256,13 @@ p, .text-muted {
     transform: translateY(-2px);
 }
 
+.btn-danger {
+    background: rgba(220, 53, 69, 0.1) !important;
+    border: 1px solid #dc3545 !important;
+    color: #dc3545 !important;
+    box-shadow: 0 0 15px rgba(220, 53, 69, 0.3) !important;
+}
+
 .btn-outline-light-custom {
     color: white;
     padding: 12px 30px;
