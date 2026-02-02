@@ -947,7 +947,7 @@ footer {
     display: flex;
     width: max-content;
     animation: scroll 80s linear infinite; /* Slower speed */
-    gap: 60px; /* Larger gap */
+    gap: 50px; /* Consistent gap for calculation */
 }
 
 .cert-track:hover {
@@ -955,18 +955,18 @@ footer {
 }
 
 .cert-slide {
-    width: 200px; /* Balanced size */
+    width: 200px; /* Refined size */
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #ffffff;
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    border-radius: 8px;
-    padding: 12px;
-    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: 12px;
+    padding: 15px; /* More breathing room */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .cert-slide:hover {
@@ -988,8 +988,8 @@ footer {
         transform: translateX(0);
     }
     100% {
-        /* Total items (14) * (item width (180) + gap (60)) = 14 * 240 = 3360 */
-        transform: translateX(-3360px);
+        /* Total items (14) * (item width (200) + gap (50)) = 14 * 250 = 3500 */
+        transform: translateX(-3500px);
     }
 }
 
@@ -1001,9 +1001,11 @@ footer {
     .cert-slide {
         width: 140px;
         height: 70px;
+        padding: 10px;
+        gap: 30px;
     }
     @keyframes scroll {
         0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-180px * 14)); } /* (140 + 40) * 14 */
+        100% { transform: translateX(calc(-140px * 14 - 30px * 14)); } /* (width + gap) * 14 */
     }
 }
