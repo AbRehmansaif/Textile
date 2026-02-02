@@ -614,6 +614,20 @@ footer {
     opacity: 1;
     transform: scale(1);
 }
+
+.card-img-250 {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-detail-img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
 .img-reveal.is-visible::after {
     transform: scaleX(0);
     transform-origin: right;
